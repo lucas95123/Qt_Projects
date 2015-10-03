@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\instruct_set.o
+./release\instruction.o
+./release\regisiter.o
+./release\stdafx.o
+./release\ideexception.o
+./release\myhighlighter.o
+./release\qrc_mips.o
+./release\moc_mainwindow.o
+);

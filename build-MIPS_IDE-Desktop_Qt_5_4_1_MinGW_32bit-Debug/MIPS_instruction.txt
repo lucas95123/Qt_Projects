@@ -1,0 +1,189 @@
+add R op 0 shamt 0 funct 20 ; rd rs rt ;
+sub R op 0 shamt 0 funct 22 ; rd rs rt ;
+addu R op 0 shamt 0 funct 21 ; rd rs rt ;
+addi I op 8 ; rt rs imm ;
+addiu I op 9 ; rt rs imm ;
+and R op 0 shamt 0 funct 24 ; rd rs rt ;
+andi I op c ; rt rs imm ;
+clo R op 1c rt 0 shamt 0 funct 21 ; rd rs ;
+clz R op 1c rt 0 shamt 0 funct 20 ; rd rs ;
+div R op 0 rd 0 shamt 0 funct 1a ; rs rt ;
+divu R op 0 rd 0 shamt 0 funct 1b ; rs rt ;
+mult R op 0 rd 0 shamt 0 funct 18 ; rs rt ;
+multu R op 0 rd 0 shamt 0 funct 19 ; rs rt ;
+mul R op 1c shamt 0 funct 2 ; rd rs rt ;
+madd  R op 1c rd 0  shamt 0 funct 0 ; rs rt ;
+maddu R op 1c rd 0 shamt 0 funct 1 ; rs rt ;
+msub R op 1c rd 0 shamt 0 funct 4 ; rs rt ;
+msubu R op 1c rd 0 shamt 0 funct 5 ; rs rt ;
+nor R op 0 shamt 0 funct 27 ; rd rs rt ;
+or R op 0 shamt 0 funct 25 ; rd rs rt ;
+ori I op d ; rt rs imm ;
+sll R op 0 funct 0 ; rd rt shamt ;
+sllv R op 0 shamt 0 funct 4 ; rd rt rs ;
+sra R op 0 funct 3 ; rd rt shamt ;
+srav R op 0 shamt 0 funct 7 ; rd rt rs ;
+srl R op 0 funct 2 ; rd rt shamt ;
+srlv R op 0 shamt 0 funct 6 ; rd rt rs ;
+sub R op 0 shamt 0 funct 22 ; rd rs rt ;
+subu R op 0 shamt 0 funct 23 ; rd rs rt ;
+xor R op 0 shamt 0 funct 26 ; rd rs rt ;
+xori I op e ; rt rs imm ;
+lui I op f rs 0 ; rt imm ;
+slt R op 0 shamt 0 funct 2a ; rd rs rt ;
+sltu R op 0 shamt 0 funct 2b ; rd rs rt ;
+slti I op a ; rt rs imm ;
+sltiu I op b ; rt rs imm ;
+beq I op 4 ; rs rt lable ;
+bgez I op 1 rt 1 ; rs lable ;
+bgezal I op 1 rt 11 ; rs lable ;
+bgtz I op 7 rt 0 ; rs lable ;
+blez I op 6 rt 0 ; rs lable ;
+bltzal I op 1 rt 10 ; rs lable ;
+bltz I op 1 rt 0 ; rs lable ;
+bne I op 5 ; rs rt lable ;
+jalr R op 0 rt 0 shamt 0 funct 9 ; rs rd ;
+jr R op 0 rt 0 rd 0 shamt 0 funct 8 ; rs ;
+teq R op 0 rd 0 shamt 0 funct 34 ; rs rt ;
+teqi I op 1 rt c ; rs imm ;
+tne R op 0 rd 0 shamt 0 funct 36 ; rs rt ;
+tnei I op 1 rt e ; rs imm ;
+tge R op 0 rd 0 shamt 0 funct 30 ; rs rt ;
+tgeu R op 0 rd 0 shamt 0 funct 31 ; rs rt ;
+tgei I op 1 rt 8 ; rs imm ;
+tgeiu I op 1 rt 9 ; rs imm ;
+tlt R op 0 rd 0 shamt 0 funct 32 ; rs rt ;
+tltu R op 0 rd 0 shamt 0 funct 33 ; rs rt ;
+tlti I op 1 rt a ; rs imm ;
+tltiu I op 1 rt b ; rs imm ;
+lb I op 20 ; rt address ;
+lbu I op 24 ; rt address ;
+lh I op 21 ; rt address ;
+lhu I op 25 ; rt address ;
+lw I op 23 ; rt address ;
+lwcl I op 31 ; rt address ;
+lwl I op 22 ; rt address ;
+lwr I op 26 ; rt address ;
+ll I op 30 ; rt address ;
+sb I op 28 ; rt address ;
+sh I op 29 ; rt address ;
+sw I op 2b ; rt address ;
+swcl I op 31 ; rt address ;
+sdcl I op 3d ; rt address ;
+swl I op 2a ; rt address ;
+swr I op 2e ; rt address ;
+sc I op 38 ; rt address ;
+mfhi R op 0 rs 0 rt 0 shamt 0 funct 10 ; rd ;
+mflo R op 0 rs 0 rt 0 shamt 0 funct 12 ; rd ;
+mthi R op 0 rt 0 rd 0 shamt 0 funct 11 ; rs ;
+mflo R op 0 rs 0 rt 0 shamt 0 funct 13 ; rs ;
+mfc0 R op 10 rs 0 shamt 0 funct 0 ; rt rd ;
+mfcl R op 11 rs 0 shamt 0 funct 0 ; rt rd ;
+mtc0 R op 10 rs 4 shamt 0 funct 0 ; rd rt ;
+mtcl R op 11 rs 4 shamt 0 funct 0 ; rd rt ;
+movn R op 0 shamt 0 funct b ; rd rs rt ;
+movz R op 0 shamt 0 funct a ; rd rs rt ;
+j J op 2 ; target ;
+jal J op 3 ; target ; 
+eret R op 10 rs 1 rd 0 rt 0 shamt 0 funct 18 ; ;
+syscall R op 0 rs 0 rd 0 rt 0 shamt 0 funct c ; ;
+nop R op 0 rs 0 rd 0 rt 0 shamt 0 funct 0 ; ;
+end 
+$zero 0
+$at 1
+$v0 2
+$v1 3
+$a0 4
+$a1 5
+$a2 6
+$a3 7
+$t0 8
+$t1 9
+$t2 10
+$t3 11
+$t4 12
+$t5 13
+$t6 14 
+$t7 15
+$s0 16
+$s1 17
+$s2 18
+$s3 19
+$s4 20
+$s5 21
+$s6 22
+$s7 23
+$t8 24
+$t9 25
+$k0 26
+$k1 27
+$gp 28
+$sp 29
+$fp 30
+$ra 31
+r0 0
+r1 1
+r2 2
+r3 3
+r4 4
+r5 5
+r6 6
+r7 7
+r8 8
+r9 9
+r10 10
+r11 11
+r12 12
+r13 13
+r14 14
+r15 15
+r16 16
+r17 17
+r18 18
+r19 19
+r20 20
+r21 21
+r22 22
+r23 23
+r24 24
+r25 25
+r26 26
+r27 27
+r28 28
+r29 29
+r30 30
+r31 31
+end
+0 $zero
+1 $at
+2 $v0
+3 $v1
+4 $a0
+5 $a1
+6 $a2
+7 $a3
+8 $t0
+9 $t1
+10 $t2
+11 $t3
+12 $t4
+13 $t5
+14 $t6
+15 $t7
+16 $s0
+17 $s1
+18 $s2
+19 $s3
+20 $s4
+21 $s5
+22 $s6
+23 $s7
+24 $t8
+25 $t9
+26 $k0
+27 $k1
+28 $gp
+29 $sp
+30 $fp
+31 $ra
+end

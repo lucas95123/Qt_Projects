@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\instruct_set.o
+./debug\instruction.o
+./debug\regisiter.o
+./debug\stdafx.o
+./debug\ideexception.o
+./debug\myhighlighter.o
+./debug\qrc_mips.o
+./debug\moc_mainwindow.o
+);

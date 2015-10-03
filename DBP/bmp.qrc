@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/bmp">
+        <file>bmp/in.ico</file>
+        <file>bmp/multi in.ico</file>
+        <file>bmp/search.ico</file>
+        <file>bmp/single in.ico</file>
+        <file>bmp/图像 1.bmp</file>
+        <file>bmp/图像 4.bmp</file>
+        <file>bmp/图像 5.bmp</file>
+        <file>bmp/Add user.ico</file>
+        <file>bmp/Remove user.ico</file>
+        <file>C:/Users/Lucas/Desktop/DBP/books.ico</file>
+    </qresource>
+</RCC>
